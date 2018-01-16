@@ -9,7 +9,7 @@ pipeline {
     }
   }
   post {
-        success {
+        always {
           archive 'dist/*.jar'
 	    }
     }
