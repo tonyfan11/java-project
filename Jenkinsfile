@@ -1,5 +1,6 @@
 pipeline {
- 
+  agent none
+
   stages {
      stage('build') {
        steps {
@@ -8,8 +9,6 @@ pipeline {
     }
   }
   post {
-        always {
-          archive 'dist/*.jar'
-	    }
-    }
+                   archive 'dist/*.jar'
+	   }
 }
